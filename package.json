@@ -5,7 +5,8 @@
   "description": "The app offers beverage tastings from across the world",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettify": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/rheimers/tastingApp/issues"
   },
-  "homepage": "https://github.com/rheimers/tastingApp#readme"
+  "homepage": "https://github.com/rheimers/tastingApp#readme",
+  "devDependencies": {
+    "prettier": "^2.1.1"
+  }
 }
