@@ -1,5 +1,6 @@
 {
   "name": "tastingApp",
+  "private": true,
   "version": "1.0.0",
   "description": "The app offers beverage tastings from across the world",
   "main": "index.js",
