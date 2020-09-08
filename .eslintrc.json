@@ -1,16 +1,31 @@
 {
   "env": {
+    "browser": true,
     "commonjs": true,
     "es6": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "prettier"],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "all",
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
 }
