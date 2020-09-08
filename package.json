@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettify": "prettier --write ."
+    "prettify": "prettier --write .",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,8 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
