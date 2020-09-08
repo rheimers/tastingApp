@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettify": "prettier --write ."
+    "prettify": "prettier --write .",
+    "server": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0",
+    "nodemon": "^2.0.4",
     "prettier": "^2.1.1"
   },
   "husky": {
@@ -34,5 +37,8 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
