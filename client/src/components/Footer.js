@@ -24,6 +24,21 @@ const FooterDelimitation = styled.div`
 const FooterIcons = styled.nav`
   padding: 1em 0.5em;
   margin: 0 1em;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const FooterIconButton = styled.div`
+  text-align: center;
+  flex-basis: 0;
+  img {
+    margin-bottom: 5px;
+  }
+  div {
+  }
+  &:hover {
+    background-color: orange;
+  }
 `;
 
 export default function Footer() {
@@ -31,20 +46,30 @@ export default function Footer() {
     <FooterContainer>
       <FooterDelimitation />
       <FooterIcons>
-        <img src={SearchIcon} alt="Search tasting" />
-        <div>Search</div>
+        <FooterIconButton>
+          <img src={SearchIcon} alt="Search tasting" />
+          <div>Search</div>
+        </FooterIconButton>
 
-        <img src={ThirstIcon} alt="Thirst for more tastings" />
-        <div>Thirst</div>
+        <FooterIconButton>
+          <img src={ThirstIcon} alt="Thirst for more tastings" />
+          <div>Thirst</div>
+        </FooterIconButton>
 
-        <img src={CalendarIcon} alt="Tasting events" />
-        <div>Tastings</div>
+        <FooterIconButton>
+          <img src={CalendarIcon} alt="Tasting events" />
+          <div>Tastings</div>
+        </FooterIconButton>
 
-        <img src={ChatIcon} alt="Chat with tasting host" />
-        <div>Chat</div>
+        <FooterIconButton>
+          <img src={ChatIcon} alt="Chat with tasting host" />
+          <div>Chat</div>
+        </FooterIconButton>
 
-        <img src={ProfileIcon} alt="Personal Profile" />
-        <div>Profile</div>
+        <FooterIconButton>
+          <img src={ProfileIcon} alt="Personal Profile" />
+          <div>Profile</div>
+        </FooterIconButton>
       </FooterIcons>
     </FooterContainer>
   );
