@@ -15,11 +15,12 @@ const GlobalStyles = () => {
           margin: 0;
         }
         :root {
-          --font-color-orange: #ffa200;
+          --clr-primary: #ffa200;
           --font-color-white: #fffdfd;
           --contrast-color-lightgrey: #dddd;
           --page-background-color: #262524;
-          --contrast-color-anthracite: #34322c;
+          --contrast-dk: #34322c;
+          --contrast-lt: #4d4b45;
           --font-archivoblack: "ArchivoBlack-Regular";
           --font-roboto: "Roboto-Regular";
           --font-robotolight: "Roboto-Light";
