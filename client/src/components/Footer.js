@@ -7,23 +7,33 @@ import ChatIcon from "../assets/icons/chat.svg";
 import ProfileIcon from "../assets/icons/profile.svg";
 
 const FooterContainer = styled.footer`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  align-items: center;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100vw;
-  background: var(--contrast-color-anthracite);
+  background: #fff;
 `;
 
 const FooterDelimitation = styled.div`
-  height: 0.1em;
-  background: var(--contrast-color-lightgrey);
+  height: 0.4em;
+  background: var(--bg-main-gradient);
 `;
 
 const FooterIcons = styled.nav`
-  padding: 1em 0.5em;
+  padding: 0.7em 0.2em;
+  display: flex;
   margin: 0 1em;
+  justify-content: space-between;
+  & > a {
+    display: flex;
+    align-items: center;
+    padding: 0.7em;
+  }
+  & > a > img {
+    height: 1em;
+  }
 `;
 
 export default function Footer() {
@@ -32,19 +42,14 @@ export default function Footer() {
       <FooterDelimitation />
       <FooterIcons>
         <img src={SearchIcon} alt="Search tasting" />
-        <div>Search</div>
 
         <img src={ThirstIcon} alt="Thirst for more tastings" />
-        <div>Thirst</div>
 
         <img src={CalendarIcon} alt="Tasting events" />
-        <div>Tastings</div>
 
         <img src={ChatIcon} alt="Chat with tasting host" />
-        <div>Chat</div>
 
         <img src={ProfileIcon} alt="Personal Profile" />
-        <div>Profile</div>
       </FooterIcons>
     </FooterContainer>
   );
