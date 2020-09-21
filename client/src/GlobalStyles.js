@@ -2,6 +2,7 @@ import React from "react";
 import { Global, css } from "@emotion/core";
 import ArchivoBlack from "./assets/fonts/ArchivoBlack-Regular.ttf";
 import Roboto from "./assets/fonts/Roboto-Regular.ttf";
+import RobotoLight from "./assets/fonts/Roboto-Light.ttf";
 
 const GlobalStyles = () => {
   return (
@@ -16,10 +17,12 @@ const GlobalStyles = () => {
         :root {
           --font-color-orange: #ffa200;
           --font-color-white: #fffdfd;
+          --contrast-color-lightgrey: #dddd;
           --page-background-color: #262524;
           --contrast-color-anthracite: #34322c;
           --font-archivoblack: "ArchivoBlack-Regular";
           --font-roboto: "Roboto-Regular";
+          --font-robotolight: "Roboto-Light";
         }
 
         html {
@@ -30,6 +33,10 @@ const GlobalStyles = () => {
           @font-face {
             font-family: "Roboto";
             src: url(${Roboto}) format("truetype");
+          }
+          @font-face {
+            font-family: "Roboto-Light";
+            src: url(${RobotoLight}) format("truetype");
           }
           font-family: "Roboto";
           height: 100vh;
@@ -53,6 +60,12 @@ const GlobalStyles = () => {
         body {
           margin: 0;
           padding: 0;
+        }
+
+        div {
+          font-family: var(--font-robotolight);
+          size: 0.625px;
+          color: var(--contrast-color-lightgrey);
         }
         a {
           text-decoration: none;
