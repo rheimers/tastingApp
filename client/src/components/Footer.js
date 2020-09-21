@@ -17,7 +17,7 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterDelimitation = styled.div`
-  height: 0.1em;
+  height: 0.01em;
   background: var(--contrast-color-lightgrey);
 `;
 
@@ -35,6 +35,7 @@ const FooterIconButton = styled.div`
     margin-bottom: 5px;
   }
   div {
+    margin-top: 1px;
   }
   &:hover {
     background-color: orange;
