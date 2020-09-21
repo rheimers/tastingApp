@@ -39,7 +39,7 @@ const GlobalStyles = () => {
             font-family: "Roboto-Light";
             src: url(${RobotoLight}) format("truetype");
           }
-          font-family: "Roboto";
+          font-family: var(--font-roboto);
           height: 100vh;
           width: 100vw;
           background-color: var(--page-background-color);
@@ -63,7 +63,7 @@ const GlobalStyles = () => {
           padding: 0;
         }
 
-        div {
+        ::placeholder {
           font-family: var(--font-robotolight);
           size: 0.625px;
           color: var(--contrast-color-lightgrey);
