@@ -13,12 +13,12 @@ const FooterContainer = styled.footer`
   left: 0;
   bottom: 0;
   width: 100vw;
-  background: var(--contrast-color-anthracite);
+  background: var(--contrast-dk);
 `;
 
 const FooterDelimitation = styled.div`
   height: 0.01em;
-  background-color: #4d4b45;
+  background-color: var(--contrast-lt);
 `;
 
 const FooterIcons = styled.nav`
@@ -38,7 +38,7 @@ const FooterIcon = styled.div`
     margin-top: 1px;
   }
   &:hover {
-    background-color: orange;
+    background-color: var(--clr-primary);
   }
 `;
 
