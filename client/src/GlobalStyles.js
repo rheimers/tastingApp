@@ -16,6 +16,7 @@ const GlobalStyles = () => {
         }
         :root {
           --clr-primary: #ffa200;
+          --highlight-clr-wine: #fa20d8f2;
           --font-color-white: #fffdfd;
           --contrast-color-lightgrey: #dddd;
           --page-background-color: #262524;
