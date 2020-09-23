@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Main from "../components/Main";
 
 export default {
@@ -9,3 +9,4 @@ export default {
 const Template = () => <Main />;
 
 export const MainHome = Template.bind({});
+*/
