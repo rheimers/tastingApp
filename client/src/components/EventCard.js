@@ -5,12 +5,12 @@ import PropTypes from "prop-types";
 const Card = styled.div`
   display: grid;
   grid-template-columns: repeat(4, calc(100% / 4));
-  grid-template-rows: repeat(3, calc(100% / 3));
+  grid-template-rows: 40%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(${({ imgSrc }) => imgSrc});
   background-size: cover;
   background-repeat: no-repeat;
-  width: 108px;
+  min-width: 108px;
   height: 93px;
   border-radius: 12px;
   h2 {
@@ -33,8 +33,14 @@ const DateContainer = styled.div`
   margin: 4px;
   font-size: 33%;
   padding: 1px;
+  .Day {
+    color: var(--contrast-dk);
+  }
+  .Date {
+    font-size: 12px;
+  }
 `;
-const days = ["Mon", "Tu", "Wed", "Thu", "Fr", "Sat", "Sun"];
+const days = ["Sun", "Mon", "Tu", "Wed", "Thu", "Fr", "Sat"];
 const months = [
   "Jan",
   "Feb",
@@ -53,8 +59,8 @@ export default function EventCard({ title, imgSrc, date }) {
   return (
     <Card imgSrc={imgSrc}>
       <DateContainer>
-        <div>{days[date.getDay()]}</div>
-        <div>{date.getDate()}</div>
+        <div className="Day">{days[date.getDay()]}</div>
+        <div className="Date">{date.getDate()}</div>
         <div>{months[date.getMonth()]}</div>
       </DateContainer>
       <h2>{title}</h2>
