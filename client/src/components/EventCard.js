@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 
 const Card = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, calc(100% / 4));
-  grid-template-rows: 40%;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 45%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(${({ imgSrc }) => imgSrc});
   background-size: cover;
@@ -14,12 +14,12 @@ const Card = styled.div`
   height: 93px;
   border-radius: 12px;
   h2 {
-    color: var(--highlight-clr-wine);
+    color: var(--highlight-clr-category);
     grid-row: 3;
     grid-column: 1 / 5;
     font-family: var(--font-archivoblack);
-    font-size: 10px;
-    margin: 4px;
+    font-size: 12px;
+    margin: 5px;
   }
 `;
 
@@ -31,13 +31,17 @@ const DateContainer = styled.div`
   text-align: center;
   color: var(--clr-primary);
   margin: 4px;
-  font-size: 33%;
+  font-size: 50%;
   padding: 1px;
   .Day {
     color: var(--contrast-dk);
+    text-transform: uppercase;
   }
   .Date {
     font-size: 12px;
+  }
+  .Month {
+    text-transform: uppercase;
   }
 `;
 const days = ["Sun", "Mon", "Tu", "Wed", "Thu", "Fr", "Sat"];
@@ -61,7 +65,7 @@ export default function EventCard({ title, imgSrc, date }) {
       <DateContainer>
         <div className="Day">{days[date.getDay()]}</div>
         <div className="Date">{date.getDate()}</div>
-        <div>{months[date.getMonth()]}</div>
+        <div className="Month">{months[date.getMonth()]}</div>
       </DateContainer>
       <h2>{title}</h2>
     </Card>
