@@ -14,6 +14,7 @@ const FooterContainer = styled.footer`
   bottom: 0;
   width: 100vw;
   background: var(--contrast-dk);
+  font-family: var(--font-robotolight);
 `;
 
 const FooterDelimitation = styled.div`

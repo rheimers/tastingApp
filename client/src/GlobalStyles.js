@@ -16,6 +16,7 @@ const GlobalStyles = () => {
         }
         :root {
           --clr-primary: #ffa200;
+          --highlight-clr-category: #fa20d8f2;
           --font-color-white: #fffdfd;
           --contrast-color-lightgrey: #dddd;
           --page-background-color: #262524;
@@ -39,7 +40,7 @@ const GlobalStyles = () => {
             font-family: "Roboto-Light";
             src: url(${RobotoLight}) format("truetype");
           }
-          font-family: "Roboto";
+          font-family: var(--font-roboto);
           height: 100vh;
           width: 100vw;
           background-color: var(--page-background-color);
@@ -63,7 +64,7 @@ const GlobalStyles = () => {
           padding: 0;
         }
 
-        div {
+        ::placeholder {
           font-family: var(--font-robotolight);
           size: 0.625px;
           color: var(--contrast-color-lightgrey);
