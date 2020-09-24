@@ -3,20 +3,29 @@ import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import EventCard from "./EventCard";
 
+const Container = styled.div`
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  h2 {
+    margin: 10px 0 10px;
+  }
+`;
+
 const ListContainerScroller = styled.div`
   width: 100%;
   overflow: auto;
 `;
 const ListContainer = styled.div`
   display: flex;
-  & > *:not(:first-child) {
+  & > *:not(:first-of-type) {
     margin-left: 10px;
   }
 `;
 
 export default function List({ title, items }) {
   return (
-    <div>
+    <Container>
       <h2>{title}</h2>
 
       <ListContainerScroller>
@@ -31,7 +40,7 @@ export default function List({ title, items }) {
           ))}
         </ListContainer>
       </ListContainerScroller>
-    </div>
+    </Container>
   );
 }
 
