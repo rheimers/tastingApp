@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 const Card = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, calc(100% / 4));
-  grid-template-rows: repeat(3, calc(100% / 3));
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 45%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(${({ imgSrc }) => imgSrc});
   background-size: cover;
   background-repeat: no-repeat;
-  width: 108px;
+  min-width: 108px;
   height: 93px;
   border-radius: 12px;
   h2 {
@@ -18,8 +18,8 @@ const Card = styled.div`
     grid-row: 3;
     grid-column: 1 / 5;
     font-family: var(--font-archivoblack);
-    font-size: 10px;
-    margin: 4px;
+    font-size: 12px;
+    margin: 5px;
   }
 `;
 
@@ -31,10 +31,20 @@ const DateContainer = styled.div`
   text-align: center;
   color: var(--clr-primary);
   margin: 4px;
-  font-size: 33%;
+  font-size: 50%;
   padding: 1px;
+  div:first-of-type {
+    color: var(--contrast-dk);
+    text-transform: uppercase;
+  }
+  div:nth-of-type(2) {
+    font-size: 12px;
+  }
+  div:nth-of-type(3) {
+    text-transform: uppercase;
+  }
 `;
-const days = ["Mon", "Tu", "Wed", "Thu", "Fr", "Sat", "Sun"];
+const days = ["Sun", "Mon", "Tu", "Wed", "Thu", "Fr", "Sat"];
 const months = [
   "Jan",
   "Feb",
