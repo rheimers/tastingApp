@@ -33,14 +33,14 @@ const DateContainer = styled.div`
   margin: 4px;
   font-size: 50%;
   padding: 1px;
-  .Day {
+  div:first-of-type {
     color: var(--contrast-dk);
     text-transform: uppercase;
   }
-  .Date {
+  div:nth-of-type(2) {
     font-size: 12px;
   }
-  .Month {
+  div:nth-of-type(3) {
     text-transform: uppercase;
   }
 `;
@@ -63,9 +63,9 @@ export default function EventCard({ title, imgSrc, date }) {
   return (
     <Card imgSrc={imgSrc}>
       <DateContainer>
-        <div className="Day">{days[date.getDay()]}</div>
-        <div className="Date">{date.getDate()}</div>
-        <div className="Month">{months[date.getMonth()]}</div>
+        <div>{days[date.getDay()]}</div>
+        <div>{date.getDate()}</div>
+        <div>{months[date.getMonth()]}</div>
       </DateContainer>
       <h2>{title}</h2>
     </Card>
