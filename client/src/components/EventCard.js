@@ -14,7 +14,7 @@ const Card = styled.div`
   height: 93px;
   border-radius: 12px;
   h2 {
-    color: var(--highlight-clr-wine);
+    color: var(--highlight-clr-category);
     grid-row: 3;
     grid-column: 1 / 5;
     font-family: var(--font-archivoblack);
