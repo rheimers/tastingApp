@@ -1,12 +1,18 @@
 import React from "react";
 import Searchbar from "../components/Searchbar";
-import List from "../components/EventList";
+import EventList from "../components/EventList";
+import { getEvents } from "../api/getEvents";
+import useAsync from "../hooks/useAsync";
+import Footer from "../components/Footer";
 
-function EventPage(props) {
+function EventPage() {
+  const { data: events } = useAsync(getEvents);
+  console.log(events);
   return (
     <div>
       <Searchbar></Searchbar>
-      <List></List>
+      <EventList title="Next tastings" events={events}></EventList>
+      <Footer></Footer>
     </div>
   );
 }
