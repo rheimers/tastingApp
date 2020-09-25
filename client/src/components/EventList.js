@@ -23,7 +23,7 @@ const ListContainer = styled.div`
   }
 `;
 
-export default function List({ title, items }) {
+export default function EventList({ title, items }) {
   return (
     <Container>
       <h2>{title}</h2>
@@ -44,7 +44,7 @@ export default function List({ title, items }) {
   );
 }
 
-List.propTypes = {
+EventList.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.string.isRequired,
 };
