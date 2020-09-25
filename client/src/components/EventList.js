@@ -23,16 +23,17 @@ const ListContainer = styled.div`
   }
 `;
 
-export default function EventList({ title, items }) {
+export default function EventList({ title, events }) {
   return (
     <Container>
       <h2>{title}</h2>
 
       <ListContainerScroller>
         <ListContainer>
-          {items.map((item, index) => (
+          {events?.map((item, id) => (
             <EventCard
-              key={index}
+              category={item.category}
+              key={id}
               title={item.title}
               date={new Date(item.date)}
               imgSrc={item.imgSrc}
@@ -46,5 +47,5 @@ export default function EventList({ title, items }) {
 
 EventList.propTypes = {
   title: PropTypes.string.isRequired,
-  items: PropTypes.string.isRequired,
+  events: PropTypes.string.isRequired,
 };

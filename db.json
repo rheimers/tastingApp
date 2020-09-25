@@ -1,28 +1,32 @@
 {
-  "tastings": [
+  "events": [
     {
       "id": "1",
       "title": "Riesling with Pete",
       "date": "2020-10-22T15:12:23.263Z",
-      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
+      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "category": "wine"
     },
     {
       "id": "2",
       "title": "Riesling with Pete",
       "date": "2020-10-22T15:12:23.263Z",
-      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
+      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "category": "beer"
     },
     {
       "id": "3",
       "title": "Riesling with Pete",
       "date": "2020-10-22T15:12:23.263Z",
-      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
+      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "category": "coffee & tea"
     },
     {
       "id": "4",
       "title": "Riesling with Pete",
       "date": "2020-10-22T15:12:23.263Z",
-      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
+      "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "category": "soft drinks"
     }
   ]
 }

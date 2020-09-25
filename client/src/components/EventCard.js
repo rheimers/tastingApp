@@ -14,7 +14,18 @@ const Card = styled.div`
   height: 93px;
   border-radius: 12px;
   h2 {
-    color: var(--highlight-clr-category);
+    color: ${(props) => {
+      switch (props.category) {
+        case "wine":
+          return "red";
+        case "beer":
+          return "green";
+
+        default:
+          return "blue ";
+      }
+    }};
+
     grid-row: 3;
     grid-column: 1 / 5;
     font-family: var(--font-archivoblack);
@@ -59,9 +70,9 @@ const months = [
   "Nov",
   "Dec",
 ];
-export default function EventCard({ title, imgSrc, date }) {
+export default function EventCard({ title, imgSrc, date, category }) {
   return (
-    <Card imgSrc={imgSrc}>
+    <Card imgSrc={imgSrc} category={category}>
       <DateContainer>
         <div>{days[date.getDay()]}</div>
         <div>{date.getDate()}</div>
@@ -74,6 +85,7 @@ export default function EventCard({ title, imgSrc, date }) {
 
 EventCard.propTypes = {
   title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
   date: PropTypes.instanceOf(Date).isRequired,
 };
