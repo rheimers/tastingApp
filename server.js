@@ -10,6 +10,7 @@ app.use(
   express.static(path.join(__dirname, "client/storybook-static"))
 );
 
+//Handle React routing, return all requests to React app
 app.get("/", (request, response) => {
   response.send("Hello World!");
 });
