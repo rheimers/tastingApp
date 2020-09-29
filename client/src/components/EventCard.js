@@ -17,12 +17,18 @@ const Card = styled.div`
     color: ${(props) => {
       switch (props.category) {
         case "wine":
-          return "red";
+          return "var(--highlight-clr-category1)";
+        case "coffee & tea":
+          return "var(--highlight-clr-category2)";
         case "beer":
-          return "green";
+          return "var(--highlight-clr-category3)";
+        case "mixed drinks":
+          return "var(--highlight-clr-category4)";
+        case "soft drinks":
+          return "var(--highlight-clr-category5)";
 
         default:
-          return "blue ";
+          return "var(--font-color-white)";
       }
     }};
 
