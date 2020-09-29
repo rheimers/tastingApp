@@ -34,9 +34,7 @@ const Card = styled.div`
 
     grid-row: 3;
     grid-column: 1 / 5;
-    /* font-family: var(--font-archivoblack);
-    font-size: 12px; */
-    font: normal normal normal 11px/9px Archivo Black;
+    font: 11px/9px var(--font-archivoblack);
     text-transform: uppercase;
     margin: 5px;
   }
