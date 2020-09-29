@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import SearchIcon from "../assets/icons/searchInput.svg";
 
@@ -20,9 +20,19 @@ const Input = styled.input`
 `;
 
 export default function Searchbar() {
+  const [value, setValue] = React.useState("");
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("search form submitted.");
+  };
+
   return (
-    <InputContainer>
-      <Input placeholder="Search for any tasting" />
-    </InputContainer>
+    <form onSubmit={handleFormSubmit}>
+      <InputContainer>
+        <Input placeholder="Search for any tasting" />
+        <input type="submit" style={{ display: "none" }} />
+      </InputContainer>
+    </form>
   );
 }
