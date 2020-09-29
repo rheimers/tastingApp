@@ -12,7 +12,7 @@ const Container = styled.div`
   flex-flow: column;
   justify-content: space-around;
   h2 {
-    margin: 10px 0 10px;
+    margin: 0.8em 0 0.5em;
   }
 `;
 
@@ -23,7 +23,7 @@ const ListContainerScroller = styled.div`
 const ListContainer = styled.div`
   display: flex;
   & > *:not(:first-of-type) {
-    margin-left: 10px;
+    margin-left: 1.2em;
   }
 `;
 
