@@ -12,6 +12,7 @@ function EventPage() {
     <div>
       <Searchbar></Searchbar>
       <EventList title="Next tastings" events={events}></EventList>
+      <EventList title="For your taste" events={events}></EventList>
       <Footer></Footer>
     </div>
   );
