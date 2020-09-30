@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import SearchIcon from "../assets/icons/searchInput.svg";
+import PropTypes from "prop-types";
 
-const InputContainer = styled.div`
+const InputForm = styled.form`
   display: flex;
   justify-content: center;
 `;
@@ -19,10 +20,14 @@ const Input = styled.input`
   font: var(--font-robotolight);
 `;
 
-export default function Searchbar() {
+export default function Searchbar({ onSubmit, ...props }) {
   return (
-    <InputContainer>
-      <Input placeholder="Search for any tasting" />
-    </InputContainer>
+    <InputForm onSubmit={onSubmit}>
+      <Input placeholder="Search for any tasting" {...props} />
+    </InputForm>
   );
 }
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.string.isRequired,
+};
