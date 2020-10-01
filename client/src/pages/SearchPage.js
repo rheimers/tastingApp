@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import Searchbar from "../components/Searchbar";
+import React from "react";
 import EventList from "../components/EventList";
 import FilterList from "../components/FilterList";
-import { getEvents } from "../api/getEvents";
 import useAsync from "../hooks/useAsync";
 import Footer from "../components/Footer";
 import styled from "@emotion/styled";
-import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { getFilteredEvents } from "../api/getFilteredEvents";
+import EventCard from "../components/EventCard";
 
 const Container = styled.div`
   display: flex;
@@ -15,32 +14,36 @@ const Container = styled.div`
   margin-left: 0.8em;
 `;
 
-function EventPage() {
-  const history = useHistory();
-  const [query, setQuery] = useState("");
-  const { data: events } = useAsync(getFilteredEvents);
-  function handleSubmit(event) {
-    event.preventDefault();
-    history.push(`/search?q=${query}`);
-  }
-  // const filteredEvents = (events, query) => {
-  //   return events.filter(
-  //     (event) => event.toLowerCase().indexOf(query.toLowerCase()) > -1
-  //   );
-  // };
+function SearchPage() {
+  // const history = useHistory();
+  // const [query, setQuery] = useState("pete");
+  const useQuery = () => {
+    return new URLSearchParams(useLocation().search);
+  };
+  let query = useQuery();
+  console.log(query);
+  const { data: events } = useAsync(getFilteredEvents, query.get("q"));
+  console.log("[SearchPage] events:", events);
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   history.push(`/search?q=${query}`);
+  // }
+
   return (
     <Container>
-      <Searchbar
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        onSubmit={handleSubmit}
-      ></Searchbar>
-      <EventList title="Next tastings" events={events}></EventList>
-      <EventList title="For your taste" events={events}></EventList>
-      <FilterList title="Taste by beverage"></FilterList>
+      {events?.map((item, id) => (
+        <EventCard
+          category={item.category}
+          key={id}
+          title={item.title}
+          date={new Date(item.date)}
+          imgSrc={item.imgSrc}
+        />
+      ))}
+
       <Footer></Footer>
     </Container>
   );
 }
 
-export default EventPage;
+export default SearchPage;
