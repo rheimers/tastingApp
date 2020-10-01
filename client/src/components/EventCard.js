@@ -39,6 +39,7 @@ const Card = styled.div`
     margin: 5px;
   }
   flex: 1 1 0px;
+  max-width: 120px;
 `;
 
 const DateContainer = styled.div`

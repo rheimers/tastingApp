@@ -1,6 +1,4 @@
 import React from "react";
-import EventList from "../components/EventList";
-import FilterList from "../components/FilterList";
 import useAsync from "../hooks/useAsync";
 import Footer from "../components/Footer";
 import styled from "@emotion/styled";
@@ -15,8 +13,6 @@ const Container = styled.div`
 `;
 
 function SearchPage() {
-  // const history = useHistory();
-  // const [query, setQuery] = useState("pete");
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
   };
@@ -24,10 +20,6 @@ function SearchPage() {
   console.log(query);
   const { data: events } = useAsync(getFilteredEvents, query.get("q"));
   console.log("[SearchPage] events:", events);
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   history.push(`/search?q=${query}`);
-  // }
 
   return (
     <Container>
