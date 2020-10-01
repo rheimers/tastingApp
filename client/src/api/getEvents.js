@@ -5,6 +5,5 @@ export const getEvents = async () => {
   }
 
   const result = await response.json();
-  console.log(result);
   return result;
 };

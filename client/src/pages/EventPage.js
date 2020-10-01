@@ -22,11 +22,7 @@ function EventPage() {
     event.preventDefault();
     history.push(`/search?q=${query}`);
   }
-  // const filteredEvents = (events, query) => {
-  //   return events.filter(
-  //     (event) => event.toLowerCase().indexOf(query.toLowerCase()) > -1
-  //   );
-  // };
+
   return (
     <Container>
       <Searchbar
