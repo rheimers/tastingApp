@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import EventCard from "./EventCard";
+import BeerIcon from "../assets/icons/beer.svg";
+import WineIcon from "../assets/icons/wine.svg";
+import CoffeeTeaIcon from "../assets/icons/coffeetea.svg";
+import CocktailIcon from "../assets/icons/cocktail.svg";
+import SoftDrinksIcon from "../assets/icons/softdrinks.svg";
 
 const Container = styled.div`
   display: flex;
@@ -23,29 +27,24 @@ const ListContainer = styled.div`
   }
 `;
 
-export default function EventList({ title, events }) {
+export default function FilterList({ title }) {
   return (
     <Container>
       <h2>{title}</h2>
 
       <ListContainerScroller>
         <ListContainer>
-          {events?.map((item, id) => (
-            <EventCard
-              category={item.category}
-              key={id}
-              title={item.title}
-              date={new Date(item.date)}
-              imgSrc={item.imgSrc}
-            />
-          ))}
+          <img src={BeerIcon} alt="Filter by beer" />
+          <img src={WineIcon} alt="Filter by wine" />
+          <img src={CoffeeTeaIcon} alt="Filter by coffee & tea" />
+          <img src={CocktailIcon} alt="Filter by cocktail" />
+          <img src={SoftDrinksIcon} alt="Filter by soft drinks" />
         </ListContainer>
       </ListContainerScroller>
     </Container>
   );
 }
 
-EventList.propTypes = {
+FilterList.propTypes = {
   title: PropTypes.string.isRequired,
-  events: PropTypes.string.isRequired,
 };

@@ -16,7 +16,11 @@ const GlobalStyles = () => {
         }
         :root {
           --clr-primary: #ffa200;
-          --highlight-clr-category: #fa20d8f2;
+          --highlight-clr-category1: #fa20d8;
+          --highlight-clr-category2: #0bff69;
+          --highlight-clr-category3: #fbff14;
+          --highlight-clr-category4: #ffa200;
+          --highlight-clr-category5: #33b7f2;
           --font-color-white: #fffdfd;
           --contrast-color-lightgrey: #dddd;
           --page-background-color: #262524;

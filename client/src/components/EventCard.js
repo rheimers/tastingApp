@@ -14,11 +14,28 @@ const Card = styled.div`
   height: 93px;
   border-radius: 12px;
   h2 {
-    color: var(--highlight-clr-category);
+    color: ${(props) => {
+      switch (props.category) {
+        case "wine":
+          return "var(--highlight-clr-category1)";
+        case "coffee & tea":
+          return "var(--highlight-clr-category2)";
+        case "beer":
+          return "var(--highlight-clr-category3)";
+        case "mixed drinks":
+          return "var(--highlight-clr-category4)";
+        case "soft drinks":
+          return "var(--highlight-clr-category5)";
+
+        default:
+          return "var(--font-color-white)";
+      }
+    }};
+
     grid-row: 3;
     grid-column: 1 / 5;
-    font-family: var(--font-archivoblack);
-    font-size: 12px;
+    font: 11px/9px var(--font-archivoblack);
+    text-transform: uppercase;
     margin: 5px;
   }
 `;
@@ -59,9 +76,9 @@ const months = [
   "Nov",
   "Dec",
 ];
-export default function EventCard({ title, imgSrc, date }) {
+export default function EventCard({ title, imgSrc, date, category }) {
   return (
-    <Card imgSrc={imgSrc}>
+    <Card imgSrc={imgSrc} category={category}>
       <DateContainer>
         <div>{days[date.getDay()]}</div>
         <div>{date.getDate()}</div>
@@ -74,6 +91,7 @@ export default function EventCard({ title, imgSrc, date }) {
 
 EventCard.propTypes = {
   title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
   date: PropTypes.instanceOf(Date).isRequired,
 };
