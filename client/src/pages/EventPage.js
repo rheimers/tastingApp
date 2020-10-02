@@ -29,7 +29,7 @@ function EventPage() {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         onSubmit={handleSubmit}
-      ></Searchbar>
+      />
       <EventList title="Next tastings" events={events}></EventList>
       <EventList title="For your taste" events={events}></EventList>
       <FilterList title="Taste by beverage"></FilterList>
