@@ -17,9 +17,8 @@ function SearchPage() {
     return new URLSearchParams(useLocation().search);
   };
   let query = useQuery();
-  console.log(query);
+
   const { data: events } = useAsync(getFilteredEvents, query.get("q"));
-  console.log("[SearchPage] events:", events);
 
   return (
     <Container>

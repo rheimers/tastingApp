@@ -9,7 +9,6 @@ const Button = styled.button`
   color: var(--font-color-white);
   text-transform: uppercase;
   border: none;
-  width: 100%;
 `;
 
 export default Button;
