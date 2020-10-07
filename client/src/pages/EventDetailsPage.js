@@ -5,15 +5,16 @@ import EventDetails from "../components/EventDetails";
 import EventDetailsFooter from "../components/EventDetailsFooter";
 import { getEvent } from "../api/getEvent";
 import useAsync from "../hooks/useAsync";
+import { useParams } from "react-router-dom";
 
 EventDetailsPage.propTypes = {};
 
-function EventDetailsPage({ id }) {
+function EventDetailsPage() {
+  const { id } = useParams();
   const { data: event } = useAsync(getEvent, id);
-  console.log(event);
   return (
     <div>
-      <EventDetailsHeader></EventDetailsHeader>
+      <EventDetailsHeader imgSrc={event?.imgSrc} />
       {event && (
         <EventDetails
           title={event.title}
@@ -33,5 +34,5 @@ function EventDetailsPage({ id }) {
 export default EventDetailsPage;
 
 EventDetailsPage.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
