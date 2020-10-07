@@ -22,8 +22,8 @@ function App() {
           <Route path="/search">
             <SearchPage></SearchPage>
           </Route>
-          <Route path="/details">
-            <EventDetailsPage id="2" />
+          <Route path="/details/:id">
+            <EventDetailsPage />
           </Route>
         </Switch>
       </Router>
