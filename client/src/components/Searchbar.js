@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import SearchIcon from "../assets/icons/searchInput.svg";
+import SearchIcon from "../assets/icons/searchInput2.svg";
 import PropTypes from "prop-types";
 
 const InputForm = styled.form`
@@ -16,7 +16,7 @@ const Input = styled.input`
   min-width: 284px;
   background-image: url(${SearchIcon});
   background-repeat: no-repeat;
-  background-position: 8px 7px;
+  background-position: 12px 10px;
   font: var(--font-robotolight);
 `;
 
