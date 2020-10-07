@@ -31,7 +31,11 @@ function EventPage() {
         onSubmit={handleSubmit}
       />
       <EventList title="Next tastings" events={events}></EventList>
-      <EventList title="For your taste" events={events}></EventList>
+      <EventList
+        title="For your taste"
+        events={events}
+        category={"mixed drinks"}
+      ></EventList>
       <FilterList title="Taste by beverage"></FilterList>
       <Footer></Footer>
     </Container>
