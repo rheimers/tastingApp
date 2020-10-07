@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import BeerIcon from "../assets/icons/beer.svg";
 import WineIcon from "../assets/icons/wine.svg";
 import CoffeeTeaIcon from "../assets/icons/coffeetea.svg";
-import CocktailIcon from "../assets/icons/cocktail.svg";
+import MixedDrinksIcon from "../assets/icons/mixeddrinks.svg";
 import SoftDrinksIcon from "../assets/icons/softdrinks.svg";
 
 const Container = styled.div`
@@ -37,7 +37,7 @@ export default function FilterList({ title }) {
           <img src={BeerIcon} alt="Filter by beer" />
           <img src={WineIcon} alt="Filter by wine" />
           <img src={CoffeeTeaIcon} alt="Filter by coffee & tea" />
-          <img src={CocktailIcon} alt="Filter by cocktail" />
+          <img src={MixedDrinksIcon} alt="Filter by cocktail" />
           <img src={SoftDrinksIcon} alt="Filter by soft drinks" />
         </ListContainer>
       </ListContainerScroller>
