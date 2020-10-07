@@ -11,11 +11,8 @@ import TastingPackageIcon from "../assets/icons/tastingpackage.svg";
 const EventDetailsList = styled.ul`
   display: flex;
   flex-direction: column;
-
-  /* li:nth-of-type(1) {
-    list-style-image: url(${TimeIcon});
-  } */
-
+  overflow: auto;
+  padding-inline-start: 0.8rem;
   list-style: none;
   margin: 1rem;
   img {
