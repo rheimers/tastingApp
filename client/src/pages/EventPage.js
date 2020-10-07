@@ -29,6 +29,7 @@ function EventPage() {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         onSubmit={handleSubmit}
+        onClear={() => setQuery("")}
       />
       <EventList title="Next tastings" events={events}></EventList>
       <EventList
