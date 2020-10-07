@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import { useLocation } from "react-router-dom";
 import { getFilteredEvents } from "../api/getFilteredEvents";
 import EventCard from "../components/EventCard";
+import SearchPageHeader from "../components/SearchPageHeader";
 
 const Container = styled.div`
   display: flex;
@@ -23,6 +24,7 @@ function SearchPage() {
 
   return (
     <Container>
+      <SearchPageHeader></SearchPageHeader>
       {events?.map((item, id) => (
         <EventCard
           category={item.category}
