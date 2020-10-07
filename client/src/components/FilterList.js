@@ -34,6 +34,7 @@ export default function FilterList({ title }) {
 
       <ListContainerScroller>
         <ListContainer>
+          {/* around every img an element IconContainer */}
           <img src={BeerIcon} alt="Filter by beer" />
           <img src={WineIcon} alt="Filter by wine" />
           <img src={CoffeeTeaIcon} alt="Filter by coffee & tea" />
