@@ -11,27 +11,29 @@ import TastingPackageIcon from "../assets/icons/tastingpackage.svg";
 const EventDetailsList = styled.ul`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  li:nth-of-type(1) {
+
+  /* li:nth-of-type(1) {
     list-style-image: url(${TimeIcon});
-  }
-  li:nth-of-type(2) {
-    list-style-image: url(${CountryIcon});
-  }
-  li:nth-of-type(3) {
-    list-style-image: url(${CategoryIcon});
-  }
-  li:nth-of-type(4) {
-    list-style-image: url(${LanguageIcon});
-  }
-  li:nth-of-type(5) {
-    list-style-image: url(${TastingPackageIcon});
-  }
-  li:nth-of-type(6) {
-    list-style-image: url(${PriceIcon});
-  }
+  } */
+
   list-style: none;
   margin: 1rem;
+  img {
+    background: var(--contrast-dk);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 0.5rem;
+  }
+  small {
+    margin: 0 0.2rem 0 1.5rem;
+  }
 `;
 
 function EventDetails({
@@ -47,12 +49,30 @@ function EventDetails({
     <div>
       <h2>{title}</h2>
       <EventDetailsList>
-        <li>{date}</li>
-        <li>{country}</li>
-        <li>{category}</li>
-        <li>{language}</li>
-        <li>{tastingpackage}</li>
-        <li>{price}</li>
+        <li>
+          <img src={TimeIcon} alt="date" />
+          <small>{date}</small>
+        </li>
+        <li>
+          <img src={CountryIcon} alt="country" />
+          <small>{country}</small>
+        </li>
+        <li>
+          <img src={CategoryIcon} alt="category" />
+          <small>{category}</small>
+        </li>
+        <li>
+          <img src={TastingPackageIcon} alt="tastingpackage" />
+          <small>{tastingpackage}</small>
+        </li>
+        <li>
+          <img src={PriceIcon} alt="price" />
+          <small>{price}</small>
+        </li>
+        <li>
+          <img src={LanguageIcon} alt="language" />
+          <small>{language}</small>
+        </li>
       </EventDetailsList>
     </div>
   );

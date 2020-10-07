@@ -20,7 +20,7 @@ function EventDetailsPage({ id }) {
           date={event.date}
           country={event.country}
           category={event.category}
-          language={event.lanuage}
+          language={event.language}
           tastingpackage={event.tastingpackage}
           price={event.price}
         ></EventDetails>
