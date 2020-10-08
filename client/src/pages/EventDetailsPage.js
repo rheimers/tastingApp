@@ -18,7 +18,7 @@ function EventDetailsPage() {
       {event && (
         <EventDetails
           title={event.title}
-          date={event.date}
+          date={new Date(event.date)}
           country={event.country}
           category={event.category}
           language={event.language}

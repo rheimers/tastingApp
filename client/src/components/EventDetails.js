@@ -60,6 +60,22 @@ const EventDetailsList = styled.ul`
   }
 `;
 
+const days = ["Sun", "Mon", "Tu", "Wed", "Thu", "Fr", "Sat"];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
 function EventDetails({
   title,
   date,
@@ -75,7 +91,9 @@ function EventDetails({
       <EventDetailsList>
         <li>
           <img src={TimeIcon} alt="date" />
-          <small>{date}</small>
+          <small>{days[date.getDay()]}</small>
+          <small>{date.getDate()}</small>
+          <small> {months[date.getMonth()]}</small>
         </li>
         <li>
           <img src={CountryIcon} alt="country" />
