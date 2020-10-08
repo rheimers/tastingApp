@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Searchbar from "../components/Searchbar";
 import styled from "@emotion/styled";
 import ArrowLeft from "../assets/icons/arrowleft.svg";
@@ -9,7 +8,7 @@ const Header = styled.header`
   display: flex;
 `;
 
-function SearchPageHeader(props) {
+function SearchPageHeader() {
   return (
     <Header>
       <img src={ArrowLeft} alt="Arrow back" />
@@ -20,5 +19,3 @@ function SearchPageHeader(props) {
 }
 
 export default SearchPageHeader;
-
-SearchPageHeader.propTypes = {};
