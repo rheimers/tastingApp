@@ -8,6 +8,33 @@ import CountryIcon from "../assets/icons/country.svg";
 import CategoryIcon from "../assets/icons/beveragetype.svg";
 import TastingPackageIcon from "../assets/icons/tastingpackage.svg";
 
+const EventDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.8em;
+
+  h2 {
+    margin: 0.8rem 0 0.5rem;
+    color: ${(props) => {
+      switch (props.category) {
+        case "wine":
+          return "var(--highlight-clr-category1)";
+        case "coffee & tea":
+          return "var(--highlight-clr-category2)";
+        case "beer":
+          return "var(--highlight-clr-category3)";
+        case "mixed drinks":
+          return "var(--highlight-clr-category4)";
+        case "soft drinks":
+          return "var(--highlight-clr-category5)";
+
+        default:
+          return "var(--font-color-white)";
+      }
+    }};
+  }
+`;
+
 const EventDetailsList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -43,7 +70,7 @@ function EventDetails({
   tastingpackage,
 }) {
   return (
-    <div>
+    <EventDetailsContainer category={category}>
       <h2>{title}</h2>
       <EventDetailsList>
         <li>
@@ -71,7 +98,7 @@ function EventDetails({
           <small>{language}</small>
         </li>
       </EventDetailsList>
-    </div>
+    </EventDetailsContainer>
   );
 }
 
