@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Searchbar from "../components/Searchbar";
 import EventList from "../components/EventList";
-import FilterList from "../components/FilterList";
+import FilterListBeverages from "../components/FilterListBeverages";
 import { getEvents } from "../api/getEvents";
 import useAsync from "../hooks/useAsync";
 import Footer from "../components/Footer";
 import styled from "@emotion/styled";
 import { useHistory } from "react-router-dom";
+import FilterListCountry from "../components/FilterListCountry";
 
 const Container = styled.div`
   display: flex;
@@ -37,7 +38,8 @@ function EventPage() {
         events={events}
         category={"mixed drinks"}
       ></EventList>
-      <FilterList title="Taste by beverage"></FilterList>
+      <FilterListBeverages title="Taste by beverage"></FilterListBeverages>
+      <FilterListCountry title="Taste by country"></FilterListCountry>
       <Footer></Footer>
     </Container>
   );
