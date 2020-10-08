@@ -5,6 +5,5 @@ export const getFilteredEvents = async (query) => {
   }
 
   const result = await response.json();
-  console.log(result);
   return result;
 };
