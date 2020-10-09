@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function useAsync(asyncFunction) {
+function useAsync(asyncFunction, args) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -11,7 +11,7 @@ function useAsync(asyncFunction) {
         setLoading(true);
         setError(false);
         setData(null);
-        const data = await asyncFunction();
+        const data = await asyncFunction(args);
         setData(data);
       } catch (error) {
         setError(true);
@@ -20,7 +20,7 @@ function useAsync(asyncFunction) {
       }
     };
     doFetch();
-  }, [asyncFunction]);
+  }, [asyncFunction, args]);
 
   return { data, loading, error };
 }

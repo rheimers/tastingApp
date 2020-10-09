@@ -1,14 +1,29 @@
 import React from "react";
-//import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import EventPage from "./pages/EventPage";
+import SearchPage from "./pages/SearchPage";
+import styled from "@emotion/styled";
+
+const AppContainer = styled.div`
+  margin-bottom: 6.25rem;
+`;
 
 function App() {
   return (
-    <>
-      <GlobalStyles />
-      <EventPage></EventPage>
-    </>
+    <AppContainer>
+      <Router>
+        <GlobalStyles />
+        <Switch>
+          <Route exact path="/">
+            <EventPage></EventPage>
+          </Route>
+          <Route path="/search">
+            <SearchPage></SearchPage>
+          </Route>
+        </Switch>
+      </Router>
+    </AppContainer>
   );
 }
 

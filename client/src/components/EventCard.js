@@ -38,6 +38,8 @@ const Card = styled.div`
     text-transform: uppercase;
     margin: 5px;
   }
+  flex: 1 1 0px;
+  max-width: 120px;
 `;
 
 const DateContainer = styled.div`
