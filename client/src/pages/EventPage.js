@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Searchbar from "../components/Searchbar";
 import EventList from "../components/EventList";
-import FilterList from "../components/FilterList";
+import FilterListBeverages from "../components/FilterListBeverages";
 import { getEvents } from "../api/getEvents";
 import useAsync from "../hooks/useAsync";
 import Footer from "../components/Footer";
 import styled from "@emotion/styled";
 import { useHistory } from "react-router-dom";
+import FilterListCountry from "../components/FilterListCountry";
 
 const Container = styled.div`
   display: flex;
@@ -29,10 +30,16 @@ function EventPage() {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         onSubmit={handleSubmit}
+        onClear={() => setQuery("")}
       />
       <EventList title="Next tastings" events={events}></EventList>
-      <EventList title="For your taste" events={events}></EventList>
-      <FilterList title="Taste by beverage"></FilterList>
+      <EventList
+        title="For your taste"
+        events={events}
+        category={"mixed drinks"}
+      ></EventList>
+      <FilterListBeverages title="Taste by beverage"></FilterListBeverages>
+      <FilterListCountry title="Taste by country"></FilterListCountry>
       <Footer></Footer>
     </Container>
   );

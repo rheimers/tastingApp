@@ -30,5 +30,3 @@ function SearchPageHeader() {
 }
 
 export default SearchPageHeader;
-
-SearchPageHeader.propTypes = {};

@@ -23,20 +23,25 @@ const ListContainer = styled.div`
   }
 `;
 
-export default function EventList({ title, events }) {
+export default function EventList({ title, events, category }) {
+  const filteredEvents =
+    category && events
+      ? events.filter((event) => event.category === category)
+      : events;
   return (
     <Container>
       <h2>{title}</h2>
 
       <ListContainerScroller>
         <ListContainer>
-          {events?.map((item, id) => (
+          {filteredEvents?.map((event) => (
             <EventCard
-              category={item.category}
-              key={id}
-              title={item.title}
-              date={new Date(item.date)}
-              imgSrc={item.imgSrc}
+              id={event.id}
+              category={event.category}
+              key={event.id}
+              title={event.title}
+              date={new Date(event.date)}
+              imgSrc={event.imgSrc}
             />
           ))}
         </ListContainer>
@@ -48,4 +53,5 @@ export default function EventList({ title, events }) {
 EventList.propTypes = {
   title: PropTypes.string.isRequired,
   events: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };

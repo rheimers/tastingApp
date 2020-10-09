@@ -19,7 +19,6 @@ function SearchPage() {
   };
   let query = useQuery();
   const { data: events } = useAsync(getFilteredEvents, query.get("q"));
-  console.log("[SearchPage] events:", events);
 
   return (
     <Container>

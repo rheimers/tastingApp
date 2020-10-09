@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Card = styled.div`
   display: grid;
@@ -78,20 +79,23 @@ const months = [
   "Nov",
   "Dec",
 ];
-export default function EventCard({ title, imgSrc, date, category }) {
+export default function EventCard({ id, title, imgSrc, date, category }) {
   return (
-    <Card imgSrc={imgSrc} category={category}>
-      <DateContainer>
-        <div>{days[date.getDay()]}</div>
-        <div>{date.getDate()}</div>
-        <div>{months[date.getMonth()]}</div>
-      </DateContainer>
-      <h2>{title}</h2>
-    </Card>
+    <Link to={`/details/${id}`}>
+      <Card imgSrc={imgSrc} category={category}>
+        <DateContainer>
+          <div>{days[date.getDay()]}</div>
+          <div>{date.getDate()}</div>
+          <div>{months[date.getMonth()]}</div>
+        </DateContainer>
+        <h2>{title}</h2>
+      </Card>
+    </Link>
   );
 }
 
 EventCard.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
