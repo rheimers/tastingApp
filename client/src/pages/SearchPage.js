@@ -18,23 +18,22 @@ function SearchPage() {
     return new URLSearchParams(useLocation().search);
   };
   let query = useQuery();
-
   const { data: events } = useAsync(getFilteredEvents, query.get("q"));
 
   return (
     <Container>
-      <SearchPageHeader></SearchPageHeader>
-      {events?.map((item, id) => (
+      <SearchPageHeader />
+      {events?.map((event, id) => (
         <EventCard
-          category={item.category}
+          category={event.category}
           key={id}
-          title={item.title}
-          date={new Date(item.date)}
-          imgSrc={item.imgSrc}
+          title={event.title}
+          date={new Date(event.date)}
+          imgSrc={event.imgSrc}
         />
       ))}
 
-      <Footer></Footer>
+      <Footer />
     </Container>
   );
 }

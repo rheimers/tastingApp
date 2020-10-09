@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import EventDetailsPage from "./pages/EventDetailsPage";
 
 const AppContainer = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 `;
 
 function App() {
