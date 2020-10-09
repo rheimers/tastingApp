@@ -11,7 +11,8 @@
       "country": "Australia, Clare Valley",
       "tastingpackage": "A 6-pack with a selection of Pete's most outstanding Rieslings",
       "language": "English",
-      "price": "89 EUR"
+      "price": "89 EUR",
+      "type": "Tasting"
     },
     {
       "id": "2",
@@ -24,7 +25,8 @@
       "country": "France",
       "tastingpackage": "3 x 20 g of devine fairtrade black teas",
       "language": "French",
-      "price": "39 EUR"
+      "price": "39 EUR",
+      "type": "Tasting"
     },
     {
       "id": "3",
@@ -37,7 +39,8 @@
       "country": "Colombia",
       "tastingpackage": "A 6-pack of Colombia's best and typical juices",
       "language": "English",
-      "price": "49 EUR"
+      "price": "49 EUR",
+      "type": "Tasting"
     },
     {
       "id": "4",
@@ -50,7 +53,8 @@
       "country": "Belgium",
       "tastingpackage": "A discover set of 8 Craft Beers",
       "language": "English",
-      "price": "49 EUR"
+      "price": "49 EUR",
+      "type": "Tasting"
     },
     {
       "id": "5",
@@ -63,7 +67,8 @@
       "country": "Spanish",
       "tastingpackage": "Ingredients for 3 top spanish drinks",
       "language": "English",
-      "price": "79 EUR"
+      "price": "79 EUR",
+      "type": "Tasting"
     }
   ]
 }

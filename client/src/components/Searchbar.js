@@ -36,7 +36,6 @@ const ClearButton = styled.div`
 export default function Searchbar({ onSubmit, onClear, ...props }) {
   const handleClear = (event) => {
     event.preventDefault();
-    console.log("onClear", onClear);
     onClear();
   };
   return (
