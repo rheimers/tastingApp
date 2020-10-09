@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 
 const Header = styled.header`
   display: flex;
+  overflow: hidden;
 `;
 
 function SearchPageHeader() {
