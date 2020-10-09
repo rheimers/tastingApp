@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Searchbar from "../components/Searchbar";
 import styled from "@emotion/styled";
-import ArrowLeft from "../assets/icons/arrowleft.svg";
+import ArrowLeftSrc from "../assets/icons/arrowleft.svg";
 import { useHistory } from "react-router-dom";
 
 const Header = styled.header`
@@ -17,7 +17,7 @@ function SearchPageHeader() {
   }
   return (
     <Header>
-      <img src={ArrowLeft} alt="Arrow back" />
+      <img src={ArrowLeftSrc} alt="Arrow back" />
       <Searchbar
         value={query}
         onChange={(event) => setQuery(event.target.value)}

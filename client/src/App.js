@@ -6,7 +6,7 @@ import SearchPage from "./pages/SearchPage";
 import styled from "@emotion/styled";
 
 const AppContainer = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 `;
 
 function App() {

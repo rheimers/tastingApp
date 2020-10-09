@@ -11,21 +11,21 @@ const InputForm = styled.form`
 `;
 
 const Input = styled.input`
-  margin: 45px;
+  margin: 2.6rem;
   padding: 0.8rem 1rem 0.8rem 50px;
   border: 1px solid #dddddd;
   border-radius: 11px;
   min-width: 284px;
   background-image: url(${SearchIcon});
   background-repeat: no-repeat;
-  background-position: 12px 10px;
+  background-position: 0.75rem 0.625rem;
   font: var(--font-robotolight);
 `;
 
 const ClearButton = styled.div`
   position: absolute;
-  top: 57px;
-  right: 57px;
+  top: 3.4rem;
+  right: 3.8rem;
   background: transparent;
   border: none;
   &:focus {
@@ -34,8 +34,8 @@ const ClearButton = styled.div`
 `;
 
 export default function Searchbar({ onSubmit, onClear, ...props }) {
-  const handleClear = (e) => {
-    e.preventDefault();
+  const handleClear = (event) => {
+    event.preventDefault();
     console.log("onClear", onClear);
     onClear();
   };
