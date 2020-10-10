@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Progress1Src from "../assets/icons/progress1.svg";
 import ArrowRightSrc from "../assets/icons/arrowright.svg";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -28,7 +29,7 @@ const FooterIcon = styled.div`
   }
 `;
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <FooterContainer>
       <FooterIcons>
@@ -37,7 +38,9 @@ export default function Footer() {
         </FooterIcon>
 
         <FooterIcon>
-          <img src={ArrowRightSrc} alt="Arrow next" />
+          <Link to="/">
+            <img src={ArrowRightSrc} alt="Arrow next" />
+          </Link>
         </FooterIcon>
       </FooterIcons>
     </FooterContainer>
