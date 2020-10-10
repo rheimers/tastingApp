@@ -27,6 +27,6 @@ const StyledHighlightableButton = styled(HighlightableButton)`
 
 export default StyledHighlightableButton;
 HighlightableButton.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
   className: PropTypes.string.isRequired,
 };

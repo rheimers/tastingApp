@@ -54,5 +54,5 @@ export default function DetailsHeader({ imgSrc }) {
   );
 }
 DetailsHeader.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string,
 };

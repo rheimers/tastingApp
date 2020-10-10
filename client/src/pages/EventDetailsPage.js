@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import EventDetailsHeader from "../components/EventDetailsHeader";
 import EventDetails from "../components/EventDetails";
 import EventDetailsFooter from "../components/EventDetailsFooter";
@@ -32,7 +31,3 @@ function EventDetailsPage() {
 }
 
 export default EventDetailsPage;
-
-EventDetailsPage.propTypes = {
-  id: PropTypes.string.isRequired,
-};
