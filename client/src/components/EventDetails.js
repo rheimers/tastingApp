@@ -11,10 +11,10 @@ import TastingPackageIcon from "../assets/icons/tastingpackage.svg";
 const EventDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 0.8em;
+  margin-left: 0.8rem;
 
   h2 {
-    margin: 0.8rem 0 0.5rem;
+    margin: 0.8rem 1rem 0.5rem;
     color: ${(props) => {
       switch (props.category) {
         case "Wine":

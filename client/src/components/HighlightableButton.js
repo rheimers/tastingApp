@@ -18,7 +18,7 @@ const StyledHighlightableButton = styled(HighlightableButton)`
   background: transparent;
   border: none;
   &.active {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--clr-primary);
   }
   &:focus {
     outline: none;

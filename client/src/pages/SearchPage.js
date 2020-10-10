@@ -10,7 +10,7 @@ import SearchPageHeader from "../components/SearchPageHeader";
 const Container = styled.div`
   display: flex;
   flex-flow: column;
-  margin-left: 0.8em;
+  margin-left: 1.3rem;
 `;
 
 function SearchPage() {

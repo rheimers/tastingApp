@@ -23,14 +23,14 @@ const Header = styled.header`
     grid-column: 1/2;
     grid-row: 2/3;
     justify-self: center;
+    margin-left: 1rem;
   }
   & > .buttonsContainer {
     grid-column: 3/4;
     grid-row: 1/2;
     align-self: center;
     justify-self: center;
-
-    display: flex;
+    margin-top: 1rem;
   }
 `;
 

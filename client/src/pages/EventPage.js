@@ -12,7 +12,7 @@ import FilterListCountry from "../components/FilterListCountry";
 const Container = styled.div`
   display: flex;
   flex-flow: column;
-  margin-left: 0.8em;
+  margin-left: 1rem;
 `;
 
 function EventPage() {
