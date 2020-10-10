@@ -36,7 +36,7 @@ function EventPage() {
       <EventList
         title="For your taste"
         events={events}
-        category={"mixed drinks"}
+        category={"Mixed drinks"}
       ></EventList>
       <FilterListBeverages title="Taste by beverage"></FilterListBeverages>
       <FilterListCountry title="Taste by country"></FilterListCountry>

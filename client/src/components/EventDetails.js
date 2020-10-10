@@ -17,15 +17,15 @@ const EventDetailsContainer = styled.div`
     margin: 0.8rem 0 0.5rem;
     color: ${(props) => {
       switch (props.category) {
-        case "wine":
+        case "Wine":
           return "var(--highlight-clr-category1)";
-        case "coffee & tea":
+        case "Coffee & Tea":
           return "var(--highlight-clr-category2)";
-        case "beer":
+        case "Beer":
           return "var(--highlight-clr-category3)";
-        case "mixed drinks":
+        case "Mixed drinks":
           return "var(--highlight-clr-category4)";
-        case "soft drinks":
+        case "Soft drinks":
           return "var(--highlight-clr-category5)";
 
         default:
@@ -91,9 +91,12 @@ function EventDetails({
       <EventDetailsList>
         <li>
           <img src={TimeIcon} alt="date" />
-          <small>{days[date.getDay()]}</small>
-          <small>{date.getDate()}</small>
-          <small> {months[date.getMonth()]}</small>
+          <small>
+            <span>{days[date.getDay()]}, </span>
+            <span>{date.getDate()} </span>
+            <span> {months[date.getMonth()]}, </span>
+            <span> {date.getHours()} pm CEST</span>
+          </small>
         </li>
         <li>
           <img src={CountryIcon} alt="country" />
