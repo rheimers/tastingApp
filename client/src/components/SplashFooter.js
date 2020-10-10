@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Progress1Src from "../assets/icons/progress1.svg";
+import Progress2Src from "../assets/icons/progress2.svg";
 import ArrowRightSrc from "../assets/icons/arrowright.svg";
 import { Link } from "react-router-dom";
 
@@ -29,20 +30,44 @@ const FooterIcon = styled.div`
   }
 `;
 
-export default function Footer(props) {
+const Footer1 = () => (
+  <>
+    <FooterIcons>
+      <FooterIcon>
+        <img src={Progress1Src} alt="Progressbar 1" />
+      </FooterIcon>
+      <FooterIcon>
+        <img src={ArrowRightSrc} alt="Arrow next" />
+      </FooterIcon>
+    </FooterIcons>
+  </>
+);
+
+const Footer2 = () => (
+  <>
+    <FooterIcons>
+      <FooterIcon>
+        <img src={Progress2Src} alt="Progressbar 2" />
+      </FooterIcon>
+      <FooterIcon>
+        <img src={ArrowRightSrc} alt="Arrow next" />
+      </FooterIcon>
+    </FooterIcons>
+  </>
+);
+
+export default function Footer(page) {
   return (
     <FooterContainer>
-      <FooterIcons>
-        <FooterIcon>
-          <img src={Progress1Src} alt="Progressbar 1" />
-        </FooterIcon>
-
-        <FooterIcon>
-          <Link to="/">
-            <img src={ArrowRightSrc} alt="Arrow next" />
-          </Link>
-        </FooterIcon>
-      </FooterIcons>
+      {page === 1 ? (
+        <Link to="/welcome/2">
+          <Footer1 />
+        </Link>
+      ) : (
+        <Link to="/">
+          <Footer2 />
+        </Link>
+      )}
     </FooterContainer>
   );
 }

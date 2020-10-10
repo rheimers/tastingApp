@@ -11,7 +11,7 @@ const Container = styled.div`
 function SplashPage({ page }) {
   return (
     <Container>
-      <SplashMain page={1} />
+      <SplashMain page={page} />
       <SplashFooter />
     </Container>
   );

@@ -5,7 +5,7 @@ import EventPage from "./pages/EventPage";
 import SearchPage from "./pages/SearchPage";
 import styled from "@emotion/styled";
 import EventDetailsPage from "./pages/EventDetailsPage";
-import SplashPage from "./pages/SplashPageFirst";
+import SplashPage from "./pages/SplashPage";
 
 const AppContainer = styled.div`
   margin-bottom: 6.25rem;
