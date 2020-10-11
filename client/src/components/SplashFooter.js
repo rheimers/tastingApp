@@ -13,6 +13,7 @@ const FooterContainer = styled.footer`
   left: 0;
   bottom: 0;
   width: 100vw;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const FooterIcons = styled.nav`
