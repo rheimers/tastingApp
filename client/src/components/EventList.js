@@ -52,6 +52,6 @@ export default function EventList({ title, events, category }) {
 
 EventList.propTypes = {
   title: PropTypes.string.isRequired,
-  events: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  events: PropTypes.array,
+  category: PropTypes.string,
 };

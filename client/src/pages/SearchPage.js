@@ -10,7 +10,7 @@ import SearchPageHeader from "../components/SearchPageHeader";
 const Container = styled.div`
   display: flex;
   flex-flow: column;
-  margin-left: 0.8em;
+  margin-left: 1.3rem;
 `;
 
 function SearchPage() {
@@ -23,10 +23,11 @@ function SearchPage() {
   return (
     <Container>
       <SearchPageHeader />
-      {events?.map((event, id) => (
+      {events?.map((event) => (
         <EventCard
           category={event.category}
-          key={id}
+          key={event.id}
+          id={event.id}
           title={event.title}
           date={new Date(event.date)}
           imgSrc={event.imgSrc}

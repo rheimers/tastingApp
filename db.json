@@ -3,72 +3,77 @@
     {
       "id": "1",
       "title": "Riesling with Pete",
-      "date": "2020-10-13T15:12:23.263Z",
+      "date": "2020-10-13T06:00:23.263Z",
       "imgSrc": "https://images.unsplash.com/photo-1591902318851-0073633a96a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
-      "category": "wine",
+      "category": "Wine",
       "host": "Pete Smith",
       "position": "Host & Producer",
       "country": "Australia, Clare Valley",
       "tastingpackage": "A 6-pack with a selection of Pete's most outstanding Rieslings",
       "language": "English",
       "price": "89 EUR",
-      "type": "Tasting"
+      "typeTEST": "Wine Tasting",
+      "typeTEST2": "Tasting Australia"
     },
     {
       "id": "2",
       "title": "Teatime with Anna",
-      "date": "2020-10-15T15:12:23.263Z",
+      "date": "2020-10-15T03:12:23.263Z",
       "imgSrc": "https://images.unsplash.com/photo-1502302926530-87742e2c00b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-      "category": "coffee & tea",
+      "category": "Coffee & Tea",
       "host": "Anna Chauffour",
       "position": "Host & Enthusiast",
       "country": "France",
       "tastingpackage": "3 x 20 g of devine fairtrade black teas",
       "language": "French",
       "price": "39 EUR",
-      "type": "Tasting"
+      "typeTEST": "Tea Tasting",
+      "typeTEST2": "Tasting France"
     },
     {
       "id": "3",
       "title": "Juices with Max",
-      "date": "2020-10-16T15:12:23.263Z",
+      "date": "2020-10-16T04:12:23.263Z",
       "imgSrc": "https://images.unsplash.com/photo-1566618670541-94d6eafefe2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "category": "soft drinks",
+      "category": "Soft drinks",
       "host": "Max Perez",
       "position": "Host & Distributor",
       "country": "Colombia",
       "tastingpackage": "A 6-pack of Colombia's best and typical juices",
       "language": "English",
       "price": "49 EUR",
-      "type": "Tasting"
+      "typeTEST": "Juice Tasting",
+      "typeTEST2": "Tasting Colombia"
     },
     {
       "id": "4",
       "title": "Craft Beer with Bianca",
-      "date": "2020-10-21T15:12:23.263Z",
+      "date": "2020-10-21T05:12:23.263Z",
       "imgSrc": "https: //images.unsplash.com/photo-1583228189114-bd0b24aa01c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-      "category": "beer",
+      "category": "Beer",
       "host": "Bianca Leroy",
       "position": "Host & Producer",
       "country": "Belgium",
       "tastingpackage": "A discover set of 8 Craft Beers",
       "language": "English",
       "price": "49 EUR",
-      "type": "Tasting"
+      "typeTEST": "Beer Tasting",
+      "typeTEST2": "Tasting Belgium"
     },
     {
       "id": "5",
       "title": "Cocktail Hour with Mario",
-      "date": "2020-10-24T15:12:23.263Z",
+      "date": "2020-10-24T06:12:23.263Z",
       "imgSrc": "https://images.unsplash.com/photo-1547650125-48358abce41b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
-      "category": "mixed drinks",
+      "category": "Mixed drinks",
       "host": "Mario Sánchez",
       "position": "Host & Barkeeper",
       "country": "Spanish",
       "tastingpackage": "Ingredients for 3 top spanish drinks",
       "language": "English",
       "price": "79 EUR",
-      "type": "Tasting"
+      "typeTEST": "Cocktail Tasting",
+      "typeTEST2": "Tasting Spain"
     }
   ]
 }

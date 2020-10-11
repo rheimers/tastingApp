@@ -18,7 +18,7 @@ const StyledHighlightableButton = styled(HighlightableButton)`
   background: transparent;
   border: none;
   &.active {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--clr-primary);
   }
   &:focus {
     outline: none;
@@ -27,6 +27,6 @@ const StyledHighlightableButton = styled(HighlightableButton)`
 
 export default StyledHighlightableButton;
 HighlightableButton.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
   className: PropTypes.string.isRequired,
 };

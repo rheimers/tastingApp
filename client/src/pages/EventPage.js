@@ -12,7 +12,7 @@ import FilterListCountry from "../components/FilterListCountry";
 const Container = styled.div`
   display: flex;
   flex-flow: column;
-  margin-left: 0.8em;
+  margin-left: 1rem;
 `;
 
 function EventPage() {
@@ -36,7 +36,7 @@ function EventPage() {
       <EventList
         title="For your taste"
         events={events}
-        category={"mixed drinks"}
+        category={"Mixed drinks"}
       ></EventList>
       <FilterListBeverages title="Taste by beverage"></FilterListBeverages>
       <FilterListCountry title="Taste by country"></FilterListCountry>

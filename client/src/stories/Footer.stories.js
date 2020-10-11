@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../components/EventDetails";
+import Footer from "../components/Footer";
 
 export default {
   title: "Footer",

@@ -5,6 +5,7 @@ import EventPage from "./pages/EventPage";
 import SearchPage from "./pages/SearchPage";
 import styled from "@emotion/styled";
 import EventDetailsPage from "./pages/EventDetailsPage";
+import SplashPage from "./pages/SplashPage";
 
 const AppContainer = styled.div`
   margin-bottom: 6.25rem;
@@ -16,11 +17,17 @@ function App() {
       <Router>
         <GlobalStyles />
         <Switch>
+          <Route exact path="/welcome">
+            <SplashPage page={1} />
+          </Route>
+          <Route exact path="/welcome/2">
+            <SplashPage page={2} />
+          </Route>
           <Route exact path="/">
-            <EventPage></EventPage>
+            <EventPage />
           </Route>
           <Route path="/search">
-            <SearchPage></SearchPage>
+            <SearchPage />
           </Route>
           <Route path="/details/:id">
             <EventDetailsPage />
