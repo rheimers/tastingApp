@@ -1,6 +1,6 @@
 # ![Brand](./client/src/assets/icons/brand.svg)
 
-Offers online drinks tastings from across the world – live, with and without alcohol
+Offers online drinks tastings from across the world – live, with and without alcohol.
 
 **THIS IS A NON-COMMERCIAL-PROJECT AS FINAL THESIS FOR MY WEB DEVELOPER BOOTCAMP AT [neue fische](https://www.neuefische.de/)**
 
