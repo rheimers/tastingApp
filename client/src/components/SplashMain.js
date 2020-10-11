@@ -2,7 +2,6 @@ import React from "react";
 import styled from "@emotion/styled";
 import LogoIconSrc from "../assets/icons/logo.svg";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;

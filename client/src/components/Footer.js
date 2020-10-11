@@ -32,6 +32,8 @@ const FooterIcons = styled.nav`
 const FooterIcon = styled.div`
   text-align: center;
   flex-basis: 0;
+  font-size: 0.8rem;
+
   img {
     margin-bottom: 3px;
   }
@@ -40,6 +42,7 @@ const FooterIcon = styled.div`
   }
   &:hover {
     background-color: var(--clr-primary);
+    border-radius: 5px;
   }
 `;
 
