@@ -75,5 +75,5 @@ export default function Footer({ page }) {
 }
 
 Footer.propTypes = {
-  page: PropTypes.string,
+  page: PropTypes.number,
 };
