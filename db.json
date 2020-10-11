@@ -12,7 +12,8 @@
       "tastingpackage": "A 6-pack with a selection of Pete's most outstanding Rieslings",
       "language": "English",
       "price": "89 EUR",
-      "type": "Tasting"
+      "typeTEST": "Wine Tasting",
+      "typeTEST2": "Tasting Australia"
     },
     {
       "id": "2",
@@ -26,7 +27,8 @@
       "tastingpackage": "3 x 20 g of devine fairtrade black teas",
       "language": "French",
       "price": "39 EUR",
-      "type": "Tasting"
+      "typeTEST": "Tea Tasting",
+      "typeTEST2": "Tasting France"
     },
     {
       "id": "3",
@@ -40,7 +42,8 @@
       "tastingpackage": "A 6-pack of Colombia's best and typical juices",
       "language": "English",
       "price": "49 EUR",
-      "type": "Tasting"
+      "typeTEST": "Juice Tasting",
+      "typeTEST2": "Tasting Colombia"
     },
     {
       "id": "4",
@@ -54,7 +57,8 @@
       "tastingpackage": "A discover set of 8 Craft Beers",
       "language": "English",
       "price": "49 EUR",
-      "type": "Tasting"
+      "typeTEST": "Beer Tasting",
+      "typeTEST2": "Tasting Belgium"
     },
     {
       "id": "5",
@@ -68,7 +72,8 @@
       "tastingpackage": "Ingredients for 3 top spanish drinks",
       "language": "English",
       "price": "79 EUR",
-      "type": "Tasting"
+      "typeTEST": "Cocktail Tasting",
+      "typeTEST2": "Tasting Spain"
     }
   ]
 }
