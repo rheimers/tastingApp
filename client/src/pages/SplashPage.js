@@ -12,7 +12,8 @@ function SplashPage({ page }) {
   return (
     <Container>
       <SplashMain page={page} />
-      <SplashFooter />
+
+      <SplashFooter page={page} />
     </Container>
   );
 }

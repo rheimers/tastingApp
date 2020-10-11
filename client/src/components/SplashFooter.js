@@ -4,6 +4,7 @@ import Progress1Src from "../assets/icons/progress1.svg";
 import Progress2Src from "../assets/icons/progress2.svg";
 import ArrowRightSrc from "../assets/icons/arrowright.svg";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -56,11 +57,12 @@ const Footer2 = () => (
   </>
 );
 
-export default function Footer(page) {
+export default function Footer({ page }) {
   return (
     <FooterContainer>
       {page === 1 ? (
         <Link to="/welcome/2">
+          {" "}
           <Footer1 />
         </Link>
       ) : (
@@ -71,3 +73,7 @@ export default function Footer(page) {
     </FooterContainer>
   );
 }
+
+Footer.propTypes = {
+  page: PropTypes.string,
+};
