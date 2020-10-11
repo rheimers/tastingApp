@@ -8,11 +8,6 @@ drinks & stories is an app where beverage producers, distributors, or simply ent
 
 Current version: 1.0 || 11.10.2020
 
-## 🖱 Deployment
-
-The app is deployed on Heroku and can be tested here:
-[drinks & stories deployment](https://tasting-app.herokuapp.com/)
-
 ## 📲 Design and layout infos
 
 The app is designed and laid out for smartphone screens, so adjust the settings in your view accordingly to IPhone 5 or 6/7/8.
